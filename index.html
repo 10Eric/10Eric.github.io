@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Èric Díez Apolo - CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Èric Díez Apolo</h1>
+  <p id="subtitle">Estudiante de Ingeniería Informática</p>
+</header>
+
+<nav>
+  <button onclick="switchLang('es')">Español</button>
+  <button onclick="switchLang('ca')">Català</button>
+  <button onclick="switchLang('en')">English</button>
+</nav>
+
+<section id="es">
+  <h2>Perfil</h2>
+  <p>Estudiante de Ingeniería Informática en la UPC. Busco una oportunidad laboral donde aplicar y desarrollar mis conocimientos.</p>
+
+  <h2>Experiencia Laboral</h2>
+  <ul>
+    <li>Auxiliar de Mesa de Baloncesto - Federació Catalana de Basquetbol (2022 - Actualidad)</li>
+    <li>Entrenador de Baloncesto - CB Cabrils (2020 - 2021)</li>
+    <li>Ayudante de Bibliotecario - Biblioteca Can Manyer (2019 - 2020)</li>
+  </ul>
+
+  <h2>Educación</h2>
+  <ul>
+    <li>Ingeniería Informática - UPC (2022 - Actualidad)</li>
+    <li>Bachillerato - Institut Jaume Almera (2020 - 2022)</li>
+  </ul>
+
+  <h2>Habilidades</h2>
+  <p>Rápido aprendizaje, buena comunicación, escucha activa, planificación, presencia profesional, idiomas.</p>
+
+  <h2>Idiomas</h2>
+  <p>Catalán, Español, Inglés (C1), Francés</p>
+
+  <h2>Contacto</h2>
+  <p>Email: <a href="mailto:ericdiezapolo@gmail.com">ericdiezapolo@gmail.com</a><br>
+     LinkedIn: <a href="https://www.linkedin.com/in/èric-díez-apolo-3b2645236/">Perfil</a><br>
+     GitHub: <a href="https://github.com/10Eric">github.com/10Eric</a>
+  </p>
+</section>
+
+<section id="ca" class="hidden">
+  <h2>Perfil</h2>
+  <p>Estudiant d'Enginyeria Informàtica a la UPC. Busco una oportunitat laboral on aplicar i desenvolupar els meus coneixements.</p>
+
+  <h2>Experiència Laboral</h2>
+  <ul>
+    <li>Auxiliar de Taula de Bàsquet - Federació Catalana de Basquetbol (2022 - Actualitat)</li>
+    <li>Entrenador de Bàsquet - CB Cabrils (2020 - 2021)</li>
+    <li>Ajudant de Bibliotecari - Biblioteca Can Manyer (2019 - 2020)</li>
+  </ul>
+
+  <h2>Educació</h2>
+  <ul>
+    <li>Enginyeria Informàtica - UPC (2022 - Actualitat)</li>
+    <li>Batxillerat - Institut Jaume Almera (2020 - 2022)</li>
+  </ul>
+
+  <h2>Habilitats</h2>
+  <p>Aprenentatge ràpid, bona comunicació, escolta activa, planificació, presència professional, idiomes.</p>
+
+  <h2>Idiomes</h2>
+  <p>Català, Castellà, Anglès (C1), Francès</p>
+
+  <h2>Contacte</h2>
+  <p>Correu: <a href="mailto:ericdiezapolo@gmail.com">ericdiezapolo@gmail.com</a><br>
+     LinkedIn: <a href="https://www.linkedin.com/in/èric-díez-apolo-3b2645236/">Perfil</a><br>
+     GitHub: <a href="https://github.com/10Eric">github.com/10Eric</a>
+  </p>
+</section>
+
+<section id="en" class="hidden">
+  <h2>Profile</h2>
+  <p>Computer Engineering student at UPC. Looking for a professional opportunity to apply and grow my knowledge and skills.</p>
+
+  <h2>Work Experience</h2>
+  <ul>
+    <li>Basketball Table Assistant - Catalan Basketball Federation (2022 - Present)</li>
+    <li>Basketball Coach - CB Cabrils (2020 - 2021)</li>
+    <li>Library Assistant - Can Manyer Library (2019 - 2020)</li>
+  </ul>
+
+  <h2>Education</h2>
+  <ul>
+    <li>Computer Engineering - UPC (2022 - Present)</li>
+    <li>Baccalaureate - Institut Jaume Almera (2020 - 2022)</li>
+  </ul>
+
+  <h2>Skills</h2>
+  <p>Quick learner, strong communication, active listening, planning, professional presence, languages.</p>
+
+  <h2>Languages</h2>
+  <p>Catalan, Spanish, English (C1), French</p>
+
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ericdiezapolo@gmail.com">ericdiezapolo@gmail.com</a><br>
+     LinkedIn: <a href="https://www.linkedin.com/in/èric-díez-apolo-3b2645236/">Profile</a><br>
+     GitHub: <a href="https://github.com/10Eric">github.com/10Eric</a>
+  </p>
+</section>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+    document.getElementById(lang).classList.remove("hidden");
+
+    const subtitles = {
+      es: "Estudiante de Ingeniería Informática",
+      ca: "Estudiant d'Enginyeria Informàtica",
+      en: "Computer Engineering Student"
+    };
+    document.getElementById("subtitle").innerText = subtitles[lang];
+  }
+</script>
+
+</body>
+</html>
