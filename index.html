@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eric Diez Apolo - CV</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
+    <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
+    <link href="css/main.css?ver=1.1.0" rel="stylesheet">
+    <style>
+        .cc-profile-image img {
+            width: 200px; 
+            height: 200px;
+            object-fit: cover;
+        }
+        [data-parallax="true"]::before {
+            background: rgba(44, 62, 80, 0.6) !important; /* azul oscuro */
+        }
+        .company-logo {
+            max-width: 100px;
+            height: auto;
+            margin: 15px auto;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        
+        .company-logo:hover {
+            transform: scale(1.05); /* Opcional: Agregar un pequeño zoom */
+        }
+        
+        .vertical-center {
+            display: flex;
+            align-items: center;
+            min-height: 200px;
+        }
+        
+        .centered-content {
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .responsibilities-list {
+            text-align: left;
+            margin: 15px 0 20px -15px;
+            list-style-type: none;
+            width: calc(100% + 15px);
+        }
+        
+        .responsibilities-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px; /* Espacio para el bullet */
+            line-height: 1.5; /* Mejor interlineado */
+        }
+        
+        .responsibilities-list li:before {
+            content: "▹";
+            position: absolute;
+            left: -20px;
+            color: #007bff;
+            top: 2px;
+        }
+        
+        .info-container {
+            display: flex;
+            align-items: center; /* Alineación vertical al centro */
+            gap: 30px;
+            margin: 25px 0;
+            padding: 15px;
+        }
+
+        .logo-container {
+            max-width: 100px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center; /* Centrado vertical del logo */
+            justify-content: center; /* Centrado horizontal */
+            margin: 0 40px 0 20px;
+        }
+
+        .details-container {
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrado vertical del texto */
+            min-height: 120px; /* Altura mínima para mantener alineación */
+        }
+        .cc-certification-header {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .cc-certification-header p {
+            margin-bottom: 0.5rem;
+        }
+
+        .cc-certification-header .h5 {
+            margin-top: 0.5rem;
+        }
+    </style>
+    <noscript>
+        <style type="text/css">
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+        </style>
+    </noscript>
+</head>
+<body id="top">
+    <header>
+        <div class="profile-page sidebar-collapse">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+                <div class="container">
+                    <div class="navbar-translate">
+                        <a class="navbar-brand" href="#" rel="tooltip">Eric Diez Apolo</a>
+                        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Habilidades</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experiencia</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Educación</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#certificaciones">Certificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contacto</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-content">
+        <div>
+            <div class="profile-page">
+                <div class="wrapper">
+                    <div class="page-header page-header-small" filter-color="blue">
+                        <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg')"></div>
+                        <div class="container">
+                            <div class="content-center">
+                                <div class="cc-profile-image"><a href="#"><img src="images/eric.jpg" alt="Eric Diez Apolo"/></a></div>
+                                <div class="h2 title">Eric Diez Apolo</div>
+                                <p class="category text-white">Estudiante de Ingeniería Informática</p>
+                                <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in">Contactar</a>
+                                <a class="btn btn-primary" href="Curriculum-Español.pdf" download data-aos="zoom-in">Descargar CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="about">
+                <div class="container">
+                    <div class="card" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card-body">
+                                    <div class="h4 mt-0 title">Sobre mí</div>
+                                    <p>Estudiante de Ingeniería Informática en la UPC con capacidad para aprender y aplicar mis conocimientos al ámbito profesional. En busca de una oportunidad laboral donde desarrollar mis habilidades y adquirir experiencia.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card-body">
+                                    <div class="h4 mt-0 title">Información básica</div>
+                                    <div class="row">
+                                        <div class="col-sm-4"><strong class="text-uppercase">Fecha de Nacimiento:</strong></div>
+                                        <div class="col-sm-8">24-02-2004</div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+                                        <div class="col-sm-8">ericdiezapolo@gmail.com</div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-4"><strong class="text-uppercase">Dirección:</strong></div>
+                                        <div class="col-sm-8">Vilassar de Dalt (08339), Barcelona</div>
+                                    </div>
+                                    <div class="row mt-3">
+                                    <div class="col-sm-4"><strong class="text-uppercase">Idiomas:</strong></div>
+                                    <div class="col-sm-8">
+                                        <ul class="language-list">
+                                            <li><strong>Catalán:</strong> Nativo</li>
+                                            <li><strong>Español:</strong> Nativo</li>
+                                            <li><strong>Inglés:</strong> C1 Advanced</li>
+                                            <li><strong>Francés:</strong> Básico (A2)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Habilidades -->
+              <div class="section" id="skill">
+              <div class="container">
+                <div class="h4 text-center mb-4 title">Habilidades Técnicas</div>
+                <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="progress-container progress-primary"><span class="progress-badge">C/C++</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 80%"></div>
+                            <span class="progress-value">80%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 80%"></div>
+                            <span class="progress-value">80%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="progress-container progress-primary"><span class="progress-badge">Java</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 80%"></div>
+                            <span class="progress-value">80%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="progress-container progress-primary"><span class="progress-badge">SQL</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 80%"></div>
+                            <span class="progress-value">80%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="experience">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">Experiencia Laboral</div>
+                    
+                    <!-- Primer trabajo -->
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary vertical-center" data-aos="fade-right">
+                                <div class="card-body cc-experience-header text-center">
+                                    <p>Sep 2022 - Actual</p>
+                                    <div class="h5">FCBQ</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 vertical-center" data-aos="fade-left">
+                                <div class="card-body">
+                                    <div class="info-container">
+                                        <div class="logo-container">
+                                            <img src="images/fcbq-logo.png" alt="FCBQ" class="company-logo">
+                                        </div>
+                                        <div class="details-container">
+                                            <div class="h5">Auxiliar de Mesa Baloncesto</div>
+                                            <ul class="responsibilities-list">
+                                                <li>Gestión completa de resultados y actas oficiales</li>
+                                                <li>Coordinación con árbitros y equipos participantes</li>
+                                                <li>Verificación de documentación reglamentaria</li>
+                                                <li>Actualización de bases de datos con resultados</li>
+                                                <li>Soporte técnico durante los partidos</li>
+                                                <li>Elaboración de informes post-competición</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segundo trabajo -->
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary vertical-center" data-aos="fade-right">
+                                <div class="card-body cc-experience-header text-center">
+                                    <p>Sep 2020 - Jun 2021</p>
+                                    <div class="h5">CB Cabrils</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 vertical-center" data-aos="fade-left">
+                                <div class="card-body">
+                                    <div class="info-container">
+                                        <div class="logo-container">
+                                            <img src="images/cabrils-logo.png" alt="CB Cabrils" class="company-logo">
+                                        </div>
+                                        <div class="details-container">
+                                            <div class="h5">Entrenador de Baloncesto</div>
+                                            <ul class="responsibilities-list">
+                                                <li>Diseño de programas de entrenamiento semanal</li>
+                                                <li>Instrucción técnica individual y colectiva</li>
+                                                <li>Preparación táctica para partidos</li>
+                                                <li>Seguimiento del desarrollo de jugadores</li>
+                                                <li>Coordinación con el cuerpo técnico</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="education">
+                <div class="container cc-education">
+                    <div class="h4 text-center mb-4 title">Formación Académica</div>
+                    
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary vertical-center" data-aos="fade-right">
+                                <div class="card-body cc-education-header text-center">
+                                    <p>2022 - Actual</p>
+                                    <div class="h5">Grado Universitario</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 vertical-center" data-aos="fade-left">
+                                <div class="card-body">
+                                    <div class="info-container">
+                                        <div class="logo-container">
+                                            <img src="images/upc-logo.png" alt="UPC" class="company-logo">
+                                        </div>
+                                        <div class="details-container">
+                                            <div class="h5">Ingeniería Informática</div>
+                                            <p class="category">Universitat Politècnica de Catalunya</p>
+                                            <ul class="responsibilities-list">
+                                                <li>Especialidad en Sistemas de Información y Ingeniería del Software</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary vertical-center" data-aos="fade-right">
+                                <div class="card-body cc-education-header text-center">
+                                    <p>2020 - 2022</p>
+                                    <div class="h5">Bachillerato</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 vertical-center" data-aos="fade-left">
+                                <div class="card-body">
+                                    <div class="info-container">
+                                        <div class="logo-container">
+                                            <img src="images/institut-logo.png" alt="Institut" class="company-logo">
+                                        </div>
+                                        <div class="details-container">
+                                        <div class="h5">Bachillerato Científico-Tecnológico</div>
+                                        <p class="category">Institut Jaume Almera</p>
+                                        <ul class="responsibilities-list">
+                                            <li>Mención honorífica</li>
+                                            <li>Promedio final: 9.54/10</li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="certificaciones">
+                <div class="container cc-certifications">
+                    <div class="h4 text-center mb-4 title">Certificaciones</div>
+
+                    <!-- Certificación C1 -->
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary vertical-center text-white" data-aos="fade-right"> <!-- Añadido text-white -->
+                                <div class="card-body cc-certification-header text-center">
+                                    <p>2022</p>
+                                    <div class="h5">C1 Advanced</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 vertical-center" data-aos="fade-left">
+                                <div class="card-body">
+                                    <div class="info-container">
+                                        <div class="logo-container">
+                                            <img src="images/cambridge-logo.png" alt="Cambridge" class="company-logo">
+                                        </div>
+                                        <div class="details-container">
+                                            <div class="h5">Cambridge English C1 Advanced</div>
+                                            <p class="category">Certificación de inglés nivel avanzado (CEFR)</p>
+                                            <ul class="responsibilities-list">
+                                                <li>Expedido por Cambridge Assessment English</li>
+                                                <li>Nivel C1 del Marco Común Europeo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificación Google -->
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary vertical-center text-white" data-aos="fade-right"> <!-- Añadido text-white -->
+                                <div class="card-body cc-certification-header text-center">
+                                    <p>2020</p>
+                                    <div class="h5">Google</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 vertical-center" data-aos="fade-left">
+                                <div class="card-body">
+                                    <div class="info-container">
+                                        <div class="logo-container">
+                                            <img src="images/google-logo.png" alt="Google" class="company-logo">
+                                        </div>
+                                        <div class="details-container">
+                                            <div class="h5">Desarrollo de Apps Móviles</div>
+                                            <p class="category">Certificación profesional de Google</p>
+                                            <ul class="responsibilities-list">
+                                                <li>Desarrollo Android con Kotlin</li>
+                                                <li>Arquitectura de aplicaciones móviles</li>
+                                                <li>Integración con APIs y Firebase</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="contact">
+                <div class="cc-contact-information" style="background-image: url('images/staticmap.png')">
+                    <div class="container">
+                        <div class="cc-contact">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="card mb-0" data-aos="zoom-in">
+                                        <div class="h4 text-center title">Contacto</div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                                                        <div class="row mb-3">
+                                                            <div class="col">
+                                                                <input class="form-control" type="text" name="name" placeholder="Nombre" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col">
+                                                                <input class="form-control" type="email" name="_replyto" placeholder="Email" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col">
+                                                                <textarea class="form-control" name="message" placeholder="Mensaje" required></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <button class="btn btn-primary" type="submit">Enviar</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <p class="mb-0"><strong>Dirección</strong></p>
+                                                    <p class="pb-2">Vilassar de Dalt, Barcelona</p>
+                                                    <p class="mb-0"><strong>Email</strong></p>
+                                                    <p>ericdiezapolo@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="h4 title text-center">Eric Diez Apolo</div>
+            <div class="text-center text-muted">
+                <p>&copy; 2025 Eric Diez Apolo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
+    <script src="js/core/popper.min.js?ver=1.1.0"></script>
+    <script src="js/core/bootstrap.min.js?ver=1.1.0"></script>
+    <script src="js/now-ui-kit.js?ver=1.1.0"></script>
+    <script src="js/aos.js?ver=1.1.0"></script>
+    <script src="scripts/main.js?ver=1.1.0"></script>
+
+</body>
+</html>
