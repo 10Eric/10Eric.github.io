@@ -455,30 +455,23 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="card-body">
-                                                <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                                                    <p class="d-none">
-                                                        <label>No llenes esto: <input name="bot-field"></label>
-                                                    </p>
-                                                    <div class="row mb-3">
-                                                        <div class="col">
-                                                            <input class="form-control" type="text" name="nombre" placeholder="Nombre" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-3">
-                                                        <div class="col">
-                                                            <input class="form-control" type="email" name="email" placeholder="Email" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-3">
-                                                        <div class="col">
-                                                            <textarea class="form-control" name="mensaje" placeholder="Mensaje" required></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <button class="btn btn-primary" type="submit">Enviar</button>
-                                                        </div>
-                                                    </div>
+                                                <form 
+                                                name="contacto" 
+                                                method="POST" 
+                                                data-netlify="true" 
+                                                netlify-honeypot="bot-field"
+                                                >
+                                                <!-- Campo anti-spam oculto -->
+                                                <p style="display: none;">
+                                                    <label>No llenes esto: <input name="bot-field"></label>
+                                                </p>
+
+                                                <!-- Campos del formulario -->
+                                                <input type="text" name="nombre" placeholder="Nombre" required>
+                                                <input type="email" name="email" placeholder="Email" required>
+                                                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                                                
+                                                <button type="submit">Enviar</button>
                                                 </form>
                                                 </div>
                                             </div>
