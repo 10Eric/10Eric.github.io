@@ -447,6 +447,69 @@
     max-height: 120px;
   }
 }
+
+/* Ajusta los elementos internos */
+#experience .cc-experience-header p{
+  margin: 0 0 14px !important;
+}
+#experience .cc-experience-header .h5{
+  margin: 0 !important;
+}
+#experience .vertical-center{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transform: none !important;
+}
+/* ===== EXPERIENCE: centrar fecha+empresa en el panel izquierdo ===== */
+
+/* el panel izquierdo ya es flex por tu .vertical-center, solo hay que quitar el padding que desplaza */
+#experience .cc-experience-header{
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-bottom: 0 !important;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;   /* centra vertical REAL */
+  align-items: center;       /* centra horizontal */
+  text-align: center;
+}
+
+/* ajustar márgenes internos para que quede perfecto */
+#experience .cc-experience-header p{
+  margin: 0 0 14px !important;
+}
+#experience .cc-experience-header .h5{
+  margin: 0 !important;
+}
+
+
+/* ===== EXPERIENCE: mover texto a la derecha para que no moleste la línea ===== */
+/* (tu línea es el border-left de .details-container) */
+
+#experience .details-container{
+  padding-left: 52px !important;   /* separa texto y bullets de la línea */
+}
+
+/* quita el “truco” de margin negativo que te empuja los bullets hacia la línea */
+#experience .responsibilities-list{
+  margin: 12px 0 0 0 !important;
+  width: 100% !important;
+}
+
+/* coloca el bullet dentro del bloque, no “por fuera” */
+#experience .responsibilities-list li{
+  padding-left: 22px !important;
+}
+
+#experience .responsibilities-list li:before{
+  left: 0 !important;              /* antes -20px */
+}
+
     </style>
     <noscript>
         <style type="text/css">
