@@ -5362,3 +5362,69 @@ a.credit {
             margin-bottom: 0.5rem !important;
         }
     }
+    /* ===== EXPERIENCE: logo MUCHO más grande + centrado vertical ===== */
+
+/* Centra logo y texto a la misma altura */
+#experience .info-container{
+  display: flex;
+  align-items: center !important;  /* antes flex-start */
+  gap: 22px;
+}
+
+/* Recuadro del logo grande */
+#experience .logo-container{
+  flex: 0 0 auto;
+  width: 220px;     /* MUCHO más grande */
+  height: 220px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.06);
+  background: rgba(0,0,0,.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;    /* margen interno para logos “apretados” */
+}
+
+/* Logo grande ocupando casi todo */
+#experience .company-logo{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* no deforma */
+  opacity: .98;
+  filter: saturate(.98);
+}
+
+/* Ajuste de tamaños por pantalla */
+@media (min-width: 992px){
+  #experience .logo-container{
+    width: 260px;
+    height: 260px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 767px){
+  /* En móvil mejor en columna, pero el logo sigue grande */
+  #experience .info-container{
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  #experience .logo-container{
+    width: 200px;
+    height: 200px;
+    padding: 14px;
+  }
+}
+#experience .details-container{
+  flex: 1 1 auto;
+}
+
+#experience .details-container .h5{
+  margin-bottom: 10px;
+}
+#experience .responsibilities-list li{
+  margin: 6px 0;
+}
+
