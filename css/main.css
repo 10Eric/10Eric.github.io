@@ -5865,3 +5865,8 @@ a.credit {
   color: #007bff !important;        /* azul original */
   font-weight: 700 !important;
 }
+
+/* ===== CERTIFICACIONES: panel izquierdo sin lila (slate/azul serio) ===== */
+#certificaciones .cert-side{
+  background: linear-gradient(135deg, #2F475F, #3E5F7A) !important;
+}
