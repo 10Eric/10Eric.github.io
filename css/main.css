@@ -5123,10 +5123,18 @@ Created using IcoMoon - icomoon.io
   /* For Safari 5.1 to 6.0 */
   /* For Opera 11.1 to 12.0 */
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(55, 140, 63, 0.6));
+  background: linear-gradient(0deg,
+    rgba(44, 44, 44, 0.22),
+    rgba(44, 62, 80, 0.62)
+  ) !important;
   /* Standard syntax */ }
-  .page-header .btn {
-    width: 140px; }
+.page-header .btn{
+  width: auto !important;          /* quita el width fijo de 140px */
+  min-width: 170px;               /* mantiene consistencia visual */
+  padding-left: 18px;
+  padding-right: 18px;
+  white-space: nowrap;            /* evita salto raro */
+}
 
 /* Profile Image Style */
 @-webkit-keyframes pulsate {
