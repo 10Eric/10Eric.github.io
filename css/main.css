@@ -5693,3 +5693,156 @@ a.credit {
     padding: 18px 18px 16px;
   }
 }
+
+/* ================================
+   CERTIFICATIONS: look pro + distinto
+   ================================ */
+
+#certificaciones .card{
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  margin-bottom: 22px;
+}
+
+/* Panel izquierdo: color distinto (índigo/morado muted) */
+#certificaciones .cert-side{
+  background: linear-gradient(135deg, #3f3d7a, #5b57a6);
+  position: relative;
+}
+
+/* Luz sutil para consistencia */
+#certificaciones .cert-side::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 25% 20%, rgba(255,255,255,.14), transparent 45%);
+  pointer-events:none;
+}
+
+/* Centrar año + “tipo” dentro del panel */
+#certificaciones .cc-certification-header{
+  padding: 0 !important;
+  height: 100%;
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#certificaciones .cc-certification-header p{
+  margin: 0 0 14px !important;
+  font-size: .95rem;
+  letter-spacing: .02em;
+  opacity: .92;
+}
+#certificaciones .cc-certification-header .h5{
+  margin: 0 !important;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Columna derecha */
+#certificaciones .col-md-9 .card-body{
+  padding: 22px 22px 20px;
+}
+
+/* Logo grande, sin fondo */
+#certificaciones .info-container{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+#certificaciones .logo-container{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+
+  flex: 0 0 auto;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#certificaciones .company-logo{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  opacity: .98;
+}
+
+/* Títulos */
+#certificaciones .details-container{
+  flex: 1 1 auto;
+}
+#certificaciones .details-container .h5{
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2c3e50;
+}
+#certificaciones .details-container .category{
+  margin: 0 0 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-size: .92rem;
+  color: rgba(44,62,80,.55);
+}
+
+/* ===== Bullets distintos (award badge) ===== */
+#certificaciones .responsibilities-list{
+  margin: 0;
+  padding-left: 0;
+}
+#certificaciones .responsibilities-list li{
+  list-style: none;
+  position: relative;
+  padding-left: 34px;
+  margin: 8px 0;
+  line-height: 1.45;
+  color: rgba(0,0,0,.75);
+}
+#certificaciones .responsibilities-list li::before{
+  content: "🏅";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(91,87,166,.10);
+  border: 1px solid rgba(91,87,166,.18);
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (min-width: 992px){
+  #certificaciones .logo-container{
+    width: 260px;
+    height: 260px;
+  }
+}
+@media (max-width: 767px){
+  #certificaciones .info-container{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  #certificaciones .logo-container{
+    width: 200px;
+    height: 200px;
+  }
+  #certificaciones .col-md-9 .card-body{
+    padding: 18px 18px 16px;
+  }
+}
