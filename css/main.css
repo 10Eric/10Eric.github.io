@@ -5362,69 +5362,74 @@ a.credit {
             margin-bottom: 0.5rem !important;
         }
     }
-    /* ===== EXPERIENCE: logo MUCHO más grande + centrado vertical ===== */
+    /* ===== EXPERIENCE: sin recuadro (logo “floating”) + centrado perfecto ===== */
 
-/* Centra logo y texto a la misma altura */
+/* Alineación vertical exacta entre logo y texto */
 #experience .info-container{
   display: flex;
-  align-items: center !important;  /* antes flex-start */
-  gap: 22px;
+  align-items: center !important;
+  gap: 24px;
 }
 
-/* Recuadro del logo grande */
+/* QUITAR el “container” del logo (sin borde, sin fondo, sin padding) */
 #experience .logo-container{
   flex: 0 0 auto;
-  width: 220px;     /* MUCHO más grande */
-  height: 220px;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,.06);
-  background: rgba(0,0,0,.02);
+  width: 240px;
+  height: 240px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;    /* margen interno para logos “apretados” */
+
+  /* ajuste fino de centrado (si lo notas 1-2px arriba) */
+  transform: translateY(2px);
 }
 
-/* Logo grande ocupando casi todo */
+/* Logo grande ocupando el área */
 #experience .company-logo{
   width: 100%;
   height: 100%;
+  object-fit: contain;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;  /* no deforma */
-  opacity: .98;
-  filter: saturate(.98);
+  display: block;
 }
 
-/* Ajuste de tamaños por pantalla */
+/* Que el texto no empuje hacia arriba */
+#experience .details-container{
+  flex: 1 1 auto;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#experience .details-container .h5{
+  margin-top: 0 !important;
+}
+
+/* Desktop grande */
 @media (min-width: 992px){
   #experience .logo-container{
-    width: 260px;
-    height: 260px;
-    padding: 16px;
+    width: 280px;
+    height: 280px;
+    transform: translateY(2px);
   }
 }
 
+/* Móvil: mejor en columna */
 @media (max-width: 767px){
-  /* En móvil mejor en columna, pero el logo sigue grande */
   #experience .info-container{
     flex-direction: column;
     align-items: flex-start !important;
   }
   #experience .logo-container{
-    width: 200px;
-    height: 200px;
-    padding: 14px;
+    width: 220px;
+    height: 220px;
+    transform: none;
   }
 }
-#experience .details-container{
-  flex: 1 1 auto;
-}
 
-#experience .details-container .h5{
-  margin-bottom: 10px;
-}
-#experience .responsibilities-list li{
-  margin: 6px 0;
-}
+
 
