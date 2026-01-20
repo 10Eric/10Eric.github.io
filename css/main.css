@@ -5530,4 +5530,9 @@ a.credit {
 #experience .cc-experience-header .h5{
   margin: 0 !important;
 }
+#experience .vertical-center{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transform: none !important;
+}
 
