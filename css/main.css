@@ -5868,5 +5868,6 @@ a.credit {
 
 /* ===== CERTIFICACIONES: panel izquierdo sin lila (slate/azul serio) ===== */
 #certificaciones .cert-side{
-  background: linear-gradient(135deg, #2F475F, #3E5F7A) !important;
+  background: linear-gradient(135deg, #4A1F2D, #6A2C3E) !important;
 }
+
