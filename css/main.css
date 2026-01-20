@@ -5846,3 +5846,22 @@ a.credit {
     padding: 18px 18px 16px;
   }
 }
+/* ===== CERTIFICACIONES: volver al bullet original (▹) ===== */
+#certificaciones .responsibilities-list li{
+  padding-left: 1.2em !important;   /* igual que el original */
+}
+
+#certificaciones .responsibilities-list li::before{
+  content: "▹" !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  display: inline !important;
+  border: none !important;
+  background: none !important;
+  border-radius: 0 !important;
+  font-size: 1.1em !important;
+  color: #007bff !important;        /* azul original */
+  font-weight: 700 !important;
+}
