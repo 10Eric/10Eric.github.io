@@ -5506,4 +5506,28 @@ a.credit {
   width: 100%;
   text-align: center;
 }
+/* ===== Centrar EXACTO (vertical + horizontal) fecha + empresa en el panel izquierdo ===== */
+
+/* El contenedor azul (col-md-3) debe ser flex y ocupar toda la altura de la card */
+#experience .card > .row > .col-md-3{
+  display: flex !important;
+  align-items: center !important;     /* centra vertical */
+  justify-content: center !important; /* centra horizontal */
+  text-align: center !important;
+}
+
+/* Evita que el padding/márgenes del card-body desplacen el contenido */
+#experience .card > .row > .col-md-3 .card-body{
+  width: 100%;
+  padding: 0 18px !important;         /* solo lateral */
+  margin: 0 !important;
+}
+
+/* Ajusta los elementos internos */
+#experience .cc-experience-header p{
+  margin: 0 0 14px !important;
+}
+#experience .cc-experience-header .h5{
+  margin: 0 !important;
+}
 
