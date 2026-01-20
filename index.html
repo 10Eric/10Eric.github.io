@@ -16,15 +16,12 @@
 
         /* Fondo sutil animado (muy suave, pro) */
         #skill .card-body::before{
-            content:"";
-            position:absolute;
-            inset:-40%;
-            background: radial-gradient(circle at 20% 20%, rgba(112, 0, 255, .10), transparent 35%),
-                        radial-gradient(circle at 80% 30%, rgba(0, 166, 255, .10), transparent 35%),
-                        radial-gradient(circle at 60% 90%, rgba(255, 140, 0, .10), transparent 35%);
-            filter: blur(18px);
-            animation: skillGlow 10s ease-in-out infinite alternate;
-            pointer-events:none;
+        /* Glow más discreto y en tonos azul/gris */
+        background:
+            radial-gradient(circle at 20% 20%, rgba(44, 62, 80, .12), transparent 38%),
+            radial-gradient(circle at 80% 30%, rgba(0, 123, 255, .10), transparent 40%),
+            radial-gradient(circle at 60% 90%, rgba(44, 62, 80, .10), transparent 42%);
+        filter: blur(20px);
         }
         @keyframes skillGlow{
             from{ transform: translate3d(-2%, -1%, 0) rotate(-2deg); }
@@ -52,7 +49,7 @@
             position:absolute;
             inset:0;
             background: linear-gradient(120deg, rgba(255,255,255,.14), rgba(255,255,255,0));
-            opacity:.55;
+            opacity:.35;
             pointer-events:none;
         }
 
