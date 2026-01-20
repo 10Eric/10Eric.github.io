@@ -5474,4 +5474,62 @@ a.credit {
   #experience .company-logo{ width: 200px; }
 }
 
+/* ===== FIX 1: la barra separadora no debe “pisar” bullets/texto ===== */
+
+/* Empuja todo el bloque de detalles a la derecha para dejar espacio a la línea */
+#experience .details-container{
+  position: relative;
+  padding-left: 28px;   /* ajusta: 24–36 según te guste */
+}
+
+/* Coloca la línea a la izquierda del bloque, fuera del texto */
+#experience .details-container::before{
+  content: "";
+  position: absolute;
+  left: 10px;           /* dónde cae la línea dentro del padding */
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 3px;
+  background: rgba(0,0,0,.10);
+}
+
+/* Quita margen/padding del UL para que no vuelva a acercarse a la línea */
+#experience .responsibilities-list{
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Asegura que los bullets (los tuyos) queden ya a la derecha del padding */
+#experience .responsibilities-list li{
+  padding-left: 20px;
+}
+
+/* Si tenías otra barra anterior, desactívala (por si existe) */
+#experience .vertical-line,
+#experience .separator,
+#experience .line{
+  display: none !important;
+}
+
+
+/* ===== FIX 2: centrar fecha + empresa dentro del recuadro azul ===== */
+
+/* Fuerza centrado vertical real del lado izquierdo */
+#experience .col-md-3.vertical-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Y centra también el contenido interno */
+#experience .cc-experience-header{
+  width: 100%;
+  text-align: center;
+}
+
+/* Opcional: ajusta un poco el espaciado */
+#experience .cc-experience-header p{
+  margin-bottom: 12px;
+}
 
