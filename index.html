@@ -319,6 +319,124 @@
 .skill-card--pink{
   background: linear-gradient(135deg, #6A4C93, #8A6FD6);
 }
+
+#experience .card{
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  margin-bottom: 22px;
+}
+
+/* Columna izquierda: menos bloque y más elegante */
+#experience .exp-side{
+  background: linear-gradient(135deg, #2f4760, #3b5c78); /* acorde al tono de la web */
+  position: relative;
+}
+#experience .exp-side::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.10), transparent 45%);
+  pointer-events:none;
+}
+
+/* Header izquierda: mejor jerarquía */
+#experience .cc-experience-header{
+  padding: 26px 16px;
+}
+#experience .cc-experience-header p{
+  margin: 0 0 10px;
+  font-size: .95rem;
+  letter-spacing: .02em;
+  opacity: .92;
+}
+#experience .cc-experience-header .h5{
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Columna derecha: padding y separación */
+#experience .col-md-9 .card-body{
+  padding: 22px 22px 20px;
+}
+
+/* Bloque logo + detalles: alineado y limpio */
+#experience .info-container{
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* Logo más consistente (sin “flotar”) */
+#experience .logo-container{
+  flex: 0 0 auto;
+  width: 92px;
+  height: 92px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.06);
+  background: rgba(0,0,0,.02);
+  display: grid;
+  place-items: center;
+}
+#experience .company-logo{
+  max-width: 70px;
+  max-height: 70px;
+  object-fit: contain;
+  filter: saturate(.95);
+  opacity: .95;
+}
+
+/* Título del rol */
+#experience .details-container .h5{
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+/* Lista: bullets más finos y mejor espaciado */
+#experience .responsibilities-list{
+  margin: 0;
+  padding-left: 0;
+}
+#experience .responsibilities-list li{
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  margin: 8px 0;
+  line-height: 1.45;
+  color: rgba(0,0,0,.76);
+}
+#experience .responsibilities-list li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(0,123,255,.85); /* acento */
+  font-weight: 900;
+}
+
+/* Responsive: en móvil, que el logo suba y no “apriete” */
+@media (max-width: 767px){
+  #experience .info-container{
+    flex-direction: column;
+    gap: 12px;
+  }
+  #experience .logo-container{
+    width: 76px;
+    height: 76px;
+  }
+  #experience .company-logo{
+    max-width: 56px;
+    max-height: 56px;
+  }
+  #experience .col-md-9 .card-body{
+    padding: 18px 18px 16px;
+  }
+}
     </style>
     <noscript>
         <style type="text/css">
@@ -589,7 +707,7 @@
                     <!-- Primer trabajo -->
                     <div class="card">
                         <div class="row">
-                            <div class="col-md-3 bg-primary vertical-center" data-aos="fade-right">
+                            <div class="col-md-3 exp-side vertical-center" data-aos="fade-right">
                                 <div class="card-body cc-experience-header text-center">
                                     <p>Jun 2025 - Actual</p>
                                     <div class="h5">Barcelona Serveis Municipals</div>
@@ -621,7 +739,7 @@
                     <!-- Segundo trabajo -->
                     <div class="card">
                         <div class="row">
-                            <div class="col-md-3 bg-primary vertical-center" data-aos="fade-right">
+                            <div class="col-md-3 exp-side vertical-center" data-aos="fade-right">
                                 <div class="card-body cc-experience-header text-center">
                                     <p>Sep 2022 - Actual</p>
                                     <div class="h5">FCBQ</div>
@@ -653,7 +771,7 @@
                     <!-- Tercer trabajo -->
                     <div class="card">
                         <div class="row">
-                            <div class="col-md-3 bg-primary vertical-center" data-aos="fade-right">
+                            <div class="col-md-3 exp-side vertical-center" data-aos="fade-right">
                                 <div class="card-body cc-experience-header text-center">
                                     <p>Sep 2020 - Jun 2021</p>
                                     <div class="h5">CB Cabrils</div>
