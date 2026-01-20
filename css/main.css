@@ -5431,5 +5431,47 @@ a.credit {
   }
 }
 
+/* ===== EXPERIENCE: logo sin fondo/recuadro (como Education) ===== */
+
+#experience .logo-container{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+
+  /* mantiene tamaño para que el logo sea grande */
+  width: 240px;
+  height: 240px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo grande, sin “caja” */
+#experience .company-logo{
+  width: 240px;          /* puedes subir a 260/280 si quieres */
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Centrado vertical con el texto */
+#experience .info-container{
+  align-items: center !important;
+}
+
+/* Responsive */
+@media (min-width: 992px){
+  #experience .logo-container{ width: 280px; height: 280px; }
+  #experience .company-logo{ width: 280px; }
+}
+@media (max-width: 767px){
+  #experience .logo-container{ width: 200px; height: 200px; }
+  #experience .company-logo{ width: 200px; }
+}
 
 
