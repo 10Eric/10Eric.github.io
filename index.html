@@ -267,61 +267,57 @@
         }
         }
         #skill .card-body::before{
-  /* Glow suave en azules/grises (más presente que antes) */
   background:
-    radial-gradient(circle at 18% 22%, rgba(0, 123, 255, .14), transparent 40%),
-    radial-gradient(circle at 82% 28%, rgba(92, 107, 192, .12), transparent 42%),
-    radial-gradient(circle at 60% 92%, rgba(44, 62, 80, .10), transparent 45%);
+    radial-gradient(circle at 18% 22%, rgba(0, 123, 255, .12), transparent 42%),
+    radial-gradient(circle at 82% 28%, rgba(108, 99, 255, .10), transparent 44%),
+    radial-gradient(circle at 60% 92%, rgba(44, 62, 80, .08), transparent 48%);
   filter: blur(18px);
 }
 
-/* brillo superior más sutil */
-.skill-card::after{ opacity: .42; }
+.skill-card::after{ opacity: .38; }
 
-/* Chips un pelín más claros */
 .chip{
-  background: rgba(255,255,255,.18);
-  border: 1px solid rgba(255,255,255,.20);
+  background: rgba(255,255,255,.17);
+  border: 1px solid rgba(255,255,255,.19);
 }
-.chip:hover{ background: rgba(255,255,255,.24); }
+.chip:hover{ background: rgba(255,255,255,.22); }
 .chip--ghost{
-  background: rgba(255,255,255,.12);
-  border: 1px dashed rgba(255,255,255,.24);
+  background: rgba(255,255,255,.11);
+  border: 1px dashed rgba(255,255,255,.22);
 }
 
-/* === Paletas (vivas pero no "neón") === */
-/* Programming: azul marino suave */
+/* Programming */
 .skill-card--purple{
-  background: linear-gradient(135deg, #2E5B8A, #3A6FA5);
+  background: linear-gradient(135deg, #355C8C, #4B79B8);
 }
 
-/* Data: azul principal algo más luminoso */
+/* Data */
 .skill-card--blue{
-  background: linear-gradient(135deg, #1E73BE, #2D8AD6);
+  background: linear-gradient(135deg, #2B6CB0, #4299E1);
 }
 
-/* Web: teal elegante */
+/* Web */
 .skill-card--teal{
-  background: linear-gradient(135deg, #2B7A78, #3A9A9A);
+  background: linear-gradient(135deg, #2C7A7B, #38B2AC);
 }
 
-/* Tools: dorado suave (mantén texto oscuro) */
+/* Tools (texto oscuro) */
 .skill-card--orange{
-  background: linear-gradient(135deg, #C6A15B, #E5CF9A);
+  background: linear-gradient(135deg, #C8A25E, #E2C98C);
   color: #1b1b1b;
 }
 .skill-card--orange .skill-card__icon,
 .skill-card--orange .chip,
 .skill-card--orange .chip--ghost{
   color:#1b1b1b;
-  background: rgba(255,255,255,.45);
-  border-color: rgba(255,255,255,.55);
+  background: rgba(255,255,255,.42);
+  border-color: rgba(255,255,255,.52);
 }
 .skill-card--orange .skill-card__icon svg{ color:#1b1b1b; }
 
-/* Other: violeta/granate suave */
+/* Other */
 .skill-card--pink{
-  background: linear-gradient(135deg, #6B3D8D, #7E57C2);
+  background: linear-gradient(135deg, #6A4C93, #8A6FD6);
 }
     </style>
     <noscript>
