@@ -6006,7 +6006,7 @@ a.credit {
   pointer-events: none;
 
   /* más lento */
-  animation: profileArcSpin 5s linear infinite;
+  animation: profileArcSpin s linear infinite;
 }
 
 @keyframes profileArcSpin{
@@ -6014,6 +6014,57 @@ a.credit {
   to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
+/* ===== Avatar: arco con efecto "respiración" (sin giro) ===== */
+
+.cc-profile-image a{
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.cc-profile-image img{
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+/* Arco */
+.cc-profile-image a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* tamaño del arco alrededor del avatar */
+  width: calc(100% + 28px);
+  height: calc(100% + 28px);
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+
+  /* arco: borde transparente + solo un tramo visible */
+  border: 8px solid transparent;
+  border-top-color: rgba(76, 175, 80, 0.65);   /* tramo principal */
+  border-right-color: rgba(76, 175, 80, 0.18); /* “cola” suave (opcional) */
+
+  /* respiración */
+  animation: arcBreath 2.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.18));
+}
+
+/* Animación respiración: escala + opacidad */
+@keyframes arcBreath{
+  0%, 100%{
+    transform: translate(-50%, -50%) scale(0.98);
+    opacity: 0.55;
+  }
+  50%{
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+}
 
 
 
