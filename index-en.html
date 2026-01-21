@@ -510,6 +510,58 @@
   left: 0 !important;              /* antes -20px */
 }
 
+/* ===== Language switch ES | EN ===== */
+.lang-switch{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(0,0,0,.10);
+  backdrop-filter: blur(6px);
+}
+
+.lang-link{
+  text-decoration: none !important;
+  font-weight: 700;
+  letter-spacing: .02em;
+  font-size: .9rem;
+  color: rgba(255,255,255,.85) !important;
+  padding: .2rem .45rem;
+  border-radius: 999px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-link:hover{
+  color: #fff !important;
+  background: rgba(255,255,255,.12);
+}
+
+.lang-link.is-active{
+  color: #fff !important;
+  background: rgba(255,255,255,.22);
+  border: 1px solid rgba(255,255,255,.28);
+}
+
+.lang-sep{
+  color: rgba(255,255,255,.55);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* En móvil/tablet: evita que se rompa */
+@media (max-width: 991px){
+  .lang-switch{
+    margin-top: .35rem;
+  }
+}
+.navbar .nav-item .lang-switch{
+  margin-left: .25rem;
+}
     </style>
     <noscript>
         <style type="text/css">
@@ -541,7 +593,7 @@
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#certificaciones">Certifications</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="index.html" id="lang-switch">ES 🇪🇸</a>
+                        <li class="nav-item"><div class="lang-switch" aria-label="Language switch"><a class="lang-link is-active" href="index.html">ES</a><span class="lang-sep">|</span><a class="lang-link" href="index-en.html">EN</a></div></li>
                     </ul>
                     </div>
                 </div>
