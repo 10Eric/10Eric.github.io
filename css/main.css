@@ -6010,6 +6010,45 @@ a.credit {
     display: none;
   }
 }
+/* ===== Avatar: borde verde SOLO al hover (pegado a la imagen) ===== */
+
+.cc-profile-image a{
+  position: relative;
+  display: inline-block;
+}
+
+/* oculto por defecto */
+.cc-profile-image a::before{
+  content: "";
+  position: absolute;
+  inset: 0;                          /* sin margen: pegado */
+  border-radius: 50%;
+  border: 6px solid rgba(76, 175, 80, 0.95); /* verde */
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity .18s ease;
+  pointer-events: none;
+  z-index: 3;                         /* por encima de la imagen */
+}
+
+/* la imagen sigue debajo */
+.cc-profile-image img{
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+/* aparece al pasar el ratón */
+.cc-profile-image a:hover::before{
+  opacity: 1;
+}
+
+/* en móvil no hay hover */
+@media (hover: none){
+  .cc-profile-image a::before{
+    display: none;
+  }
+}
 
 
 
