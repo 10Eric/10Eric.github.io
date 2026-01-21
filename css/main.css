@@ -5911,4 +5911,18 @@ a.credit {
   }
 }
 
+/* Fix círculo avatar (Firefox/Chrome) */
+.cc-profile-image a{
+  display: inline-block;      /* asegura que el <a> mida como la imagen */
+  position: relative;
+}
+
+.cc-profile-image a:before{
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
 
