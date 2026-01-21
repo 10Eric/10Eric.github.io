@@ -5925,4 +5925,49 @@ a.credit {
   pointer-events: none;
 }
 
+/* ===== Avatar: anillo tipo "arc" (solo un tramo) + más lento ===== */
+
+.cc-profile-image a{
+  position: relative;
+  display: inline-block;
+}
+
+/* Quitamos el anillo viejo si era border */
+.cc-profile-image a:before{
+  content: "" !important;
+  position: absolute !important;
+  inset: -10px;                 /* distancia del anillo al avatar */
+  border-radius: 50% !important;
+
+  /* ARC: solo un tramo del círculo */
+  background: conic-gradient(
+    from 220deg,
+    rgba(76, 175, 80, 0.0) 0deg,
+    rgba(76, 175, 80, 0.0) 220deg,
+    rgba(76, 175, 80, 0.65) 260deg,
+    rgba(76, 175, 80, 0.0) 320deg,
+    rgba(76, 175, 80, 0.0) 360deg
+  );
+
+  /* Hace que sea "borde", no disco relleno */
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 10px), #000 calc(100% - 9px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 10px), #000 calc(100% - 9px));
+
+  /* Centrado perfecto */
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+
+  /* Animación más lenta */
+  animation: profileArcSpin 6s linear infinite !important;  /* sube a 8–10s si quieres aún más lento */
+
+  pointer-events: none;
+}
+
+@keyframes profileArcSpin{
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
 
