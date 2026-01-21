@@ -6050,23 +6050,25 @@ a.credit {
   }
 }
 
-/* 1) Quitar borde/halo blanco del avatar (si lo tiene la plantilla) */
-.cc-profile-image img{
-  border: 0 !important;
-  box-shadow: none !important;
-  outline: 0 !important;
-}
-
-/* 2) Anillo verde pegado (como borde) SOLO al hover */
+/* No cambiar tamaño: solo quitar borde blanco y poner anillo encima */
 .cc-profile-image a{
   position: relative;
   display: inline-block;
+  padding: 0 !important;          /* por si el <a> tenía padding */
 }
 
+.cc-profile-image img{
+  border: 0 !important;           /* quita aro blanco de la plantilla */
+  box-shadow: none !important;
+  outline: 0 !important;
+  border-radius: 50%;
+}
+
+/* Anillo verde pegado, SOLO al hover */
 .cc-profile-image a::before{
   content: "";
   position: absolute;
-  inset: 0; /* pegado a la imagen */
+  inset: 0;                       /* pegado a la imagen */
   border-radius: 50%;
   border: 6px solid rgba(76, 175, 80, 0.95);
   opacity: 0;
