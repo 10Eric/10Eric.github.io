@@ -5968,65 +5968,49 @@ a.credit {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
-/* ===== Avatar: arco tipo "highlight" con respiración (sin giro) ===== */
+/* ===== Avatar ring SOLO al hover ===== */
 
 .cc-profile-image a{
   position: relative;
   display: inline-block;
-  overflow: visible;
 }
 
-.cc-profile-image img{
-  position: relative;
-  z-index: 2;
-  border-radius: 50%;
-}
-
-/* Arco */
+/* anillo oculto por defecto */
 .cc-profile-image a::before{
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(100% + 34px);
-  height: calc(100% + 34px);
+  width: calc(100% + 26px);
+  height: calc(100% + 26px);
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  border: 6px solid rgba(92, 143, 184, 0.85); /* azul acorde a tu web */
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
   pointer-events: none;
   z-index: 1;
-
-  /* ring base invisible */
-  border: 10px solid transparent;
-
-  /* arco: solo un tramo visible (arriba-izq como en tu ejemplo) */
-  border-top-color: rgba(76, 175, 80, 0.55);
-  border-left-color: rgba(76, 175, 80, 0.25);
-
-  /* respiración */
-  animation: arcBreath 3.2s ease-in-out infinite;
-  filter: drop-shadow(0 0 14px rgba(76, 175, 80, 0.16));
 }
 
-/* Respira: escala + opacidad */
-@keyframes arcBreath{
-  0%, 100%{
-    transform: translate(-50%, -50%) scale(0.98);
-    opacity: 0.45;
-  }
-  50%{
-    transform: translate(-50%, -50%) scale(1.05);
-    opacity: 1;
-  }
+/* foto por encima del anillo */
+.cc-profile-image img{
+  position: relative;
+  z-index: 2;
 }
 
-/* Ajuste en móvil para que no sea enorme */
-@media (max-width: 576px){
+/* al pasar el ratón: aparece el anillo */
+.cc-profile-image a:hover::before{
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+/* (opcional) en móvil no hay hover */
+@media (hover: none){
   .cc-profile-image a::before{
-    width: calc(100% + 26px);
-    height: calc(100% + 26px);
-    border-width: 8px;
+    display: none;
   }
 }
+
 
 
 
