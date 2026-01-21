@@ -562,6 +562,33 @@
   margin-left: .25rem;
 }
 
+/* ===== Navbar siempre por encima (evita solapes con la foto del header) ===== */
+.navbar.fixed-top{
+  z-index: 2000 !important;
+}
+
+/* ===== Deja espacio bajo el navbar (evita que el hero suba debajo) ===== */
+.page-header{
+  padding-top: 90px; /* ajusta 80–110 según tu navbar */
+}
+@media (max-width: 991px){
+  .page-header{
+    padding-top: 80px;
+  }
+}
+
+/* ===== Mejor visibilidad mientras es "transparent" (antes del color-on-scroll) ===== */
+.navbar.navbar-transparent{
+  background: rgba(44, 62, 80, 0.35) !important; /* sutil, acorde a la web */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Opcional: un pelín de sombra en ese estado */
+.navbar.navbar-transparent{
+  box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+
     </style>
     <noscript>
         <style type="text/css">
