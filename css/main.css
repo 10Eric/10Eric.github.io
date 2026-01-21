@@ -5968,48 +5968,6 @@ a.credit {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
-/* ===== Avatar ring SOLO al hover ===== */
-
-.cc-profile-image a{
-  position: relative;
-  display: inline-block;
-}
-
-/* anillo oculto por defecto */
-.cc-profile-image a::before{
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% + 26px);
-  height: calc(100% + 26px);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 6px solid rgba(92, 143, 184, 0.85); /* azul acorde a tu web */
-  opacity: 0;
-  transition: opacity .18s ease, transform .18s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* foto por encima del anillo */
-.cc-profile-image img{
-  position: relative;
-  z-index: 2;
-}
-
-/* al pasar el ratón: aparece el anillo */
-.cc-profile-image a:hover::before{
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.02);
-}
-
-/* (opcional) en móvil no hay hover */
-@media (hover: none){
-  .cc-profile-image a::before{
-    display: none;
-  }
-}
 
 
 
