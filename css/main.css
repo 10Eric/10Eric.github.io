@@ -5925,21 +5925,91 @@ a.credit {
   pointer-events: none;
 }
 
-/* Quitar cualquier anillo/efecto del avatar */
-.cc-profile-image a::before,
-.cc-profile-image a::after{
-  content: none !important;
-  display: none !important;
+/* ===== Avatar: anillo tipo "arc" (solo un tramo) + más lento ===== */
+
+.cc-profile-image a{
+  position: relative;
+  display: inline-block;
 }
 
-/* Quitar hover/zoom/animaciones del avatar */
-.cc-profile-image a,
-.cc-profile-image img{
-  transform: none !important;
-  animation: none !important;
-  transition: none !important;
-  box-shadow: none !important;
-  border: 0 !important;
-  outline: 0 !important;
+/* Quitamos el anillo viejo si era border */
+.cc-profile-image a:before{
+  content: "" !important;
+  position: absolute !important;
+  inset: -10px;                 /* distancia del anillo al avatar */
+  border-radius: 50% !important;
+
+  /* ARC: solo un tramo del círculo */
+  background: conic-gradient(
+    from 220deg,
+    rgba(76, 175, 80, 0.0) 0deg,
+    rgba(76, 175, 80, 0.0) 220deg,
+    rgba(76, 175, 80, 0.65) 260deg,
+    rgba(76, 175, 80, 0.0) 320deg,
+    rgba(76, 175, 80, 0.0) 360deg
+  );
+
+  /* Hace que sea "borde", no disco relleno */
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 10px), #000 calc(100% - 9px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 10px), #000 calc(100% - 9px));
+
+  /* Centrado perfecto */
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+
+  /* Animación más lenta */
+  animation: profileArcSpin 6s linear infinite !important;  /* sube a 8–10s si quieres aún más lento */
+
+  pointer-events: none;
 }
+
+@keyframes profileArcSpin{
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+/* ===== Avatar ring SOLO al hover ===== */
+
+.cc-profile-image a{
+  position: relative;
+  display: inline-block;
+}
+
+/* anillo oculto por defecto */
+.cc-profile-image a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 26px);
+  height: calc(100% + 26px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 6px solid rgba(92, 143, 184, 0.85); /* azul acorde a tu web */
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* foto por encima del anillo */
+.cc-profile-image img{
+  position: relative;
+  z-index: 2;
+}
+
+/* al pasar el ratón: aparece el anillo */
+.cc-profile-image a:hover::before{
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+/* (opcional) en móvil no hay hover */
+@media (hover: none){
+  .cc-profile-image a::before{
+    display: none;
+  }
+}
+
+
 
