@@ -5925,3 +5925,21 @@ a.credit {
   pointer-events: none;
 }
 
+/* Quitar cualquier anillo/efecto del avatar */
+.cc-profile-image a::before,
+.cc-profile-image a::after{
+  content: none !important;
+  display: none !important;
+}
+
+/* Quitar hover/zoom/animaciones del avatar */
+.cc-profile-image a,
+.cc-profile-image img{
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
